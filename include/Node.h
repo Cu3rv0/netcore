@@ -10,7 +10,12 @@ enum NodeType
    Closed
 };
 
-class NodeInterface {
+class Node
+{
 public:
-   virtual NodeType GetType() = 0;
+   Node(NodeType type = Open);
+   NodeType GetType();
+
+private:
+   NodeType m_type;
 };

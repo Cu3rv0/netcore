@@ -2,7 +2,7 @@ LDFLAGS := -lpthread -lgtest -lgtest_main -lsfml-graphics -lsfml-window -lsfml-s
 CFLAGS= -std=c++14 -g -Wall
 
 MAIN= bin/main.o
-OBJ= bin/AsciiGrid.o
+OBJ= bin/Node.o
 INC= -I include
 TEST=
 

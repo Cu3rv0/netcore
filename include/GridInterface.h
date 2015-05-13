@@ -5,5 +5,5 @@ class GridInterface {
 public:
    virtual ~GridInterface() {}
 
-   virtual const NodeInterface& at(unsigned int x, unsigned int y) = 0;
+   virtual const Node& at(unsigned int x, unsigned int y) = 0;
 };
