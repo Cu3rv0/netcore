@@ -20,18 +20,18 @@ void Grid::ConstructNodes()
          node = make_unique<Node>();
 }
 
-const Node& Grid::at(unsigned int x, unsigned int y)
+const Node& Grid::at(unsigned int x, unsigned int y) const
 {
    return *m_nodes.at(x).at(y);
 }
 
-unsigned int Grid::GetWidth()
+unsigned int Grid::GetWidth() const
 {
-   return 0;
+   return m_width;
 }
 
-unsigned int Grid::GetHeigth()
+unsigned int Grid::GetHeigth() const
 {
-   return 0;
+   return m_height;
 }
    

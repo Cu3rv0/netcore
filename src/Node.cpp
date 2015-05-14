@@ -4,7 +4,7 @@ Node::Node(NodeType type):
    m_type(type)
 {}
 
-NodeType Node::GetType()
+NodeType Node::GetType() const
 {
    return m_type;
 }

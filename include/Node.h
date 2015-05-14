@@ -14,7 +14,7 @@ class Node
 {
 public:
    Node(NodeType type = Open);
-   NodeType GetType();
+   NodeType GetType() const;
 
 private:
    NodeType m_type;

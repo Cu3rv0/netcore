@@ -9,10 +9,10 @@ class Grid: public GridInterface {
 
 public:
    Grid(unsigned int, unsigned int);
-   virtual const Node& at(unsigned int, unsigned int);
+   virtual const Node& at(unsigned int, unsigned int) const;
 
-   virtual unsigned int GetWidth();
-   virtual unsigned int GetHeigth();
+   virtual unsigned int GetWidth() const;
+   virtual unsigned int GetHeigth() const;;
 
 private:
    unsigned int m_width, m_height;
