@@ -1,4 +1,5 @@
 #include "GridAsciiUtils.h"
+#include <stdexcept>
 
 using namespace std;
 
@@ -24,4 +25,10 @@ char GridAsciiUtils::NodeTypeToChar(NodeType type)
    default:
       return 'x';
    }
+}
+
+Grid GridAsciiUtils::TextToGrid(const string& text)
+{
+   Grid returnGrid(2,2);
+   return returnGrid;
 }

@@ -6,6 +6,7 @@
 namespace GridAsciiUtils
 {
    std::string GridToText(const Grid&);
+   Grid TextToGrid(const std::string&);
 
    char NodeTypeToChar(NodeType type);
 }
