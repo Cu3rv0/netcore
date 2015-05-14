@@ -2,9 +2,9 @@ LDFLAGS := -lpthread -lgtest -lgtest_main -lsfml-graphics -lsfml-window -lsfml-s
 CFLAGS= -std=c++14 -g -Wall
 
 MAIN= bin/main.o
-OBJ= bin/Node.o
+OBJ= bin/Node.o bin/Grid.o bin/GridAsciiUtils.o
 INC= -I include
-TEST=
+TEST= tests/tests.grid.o
 
 all: netcore test
 
