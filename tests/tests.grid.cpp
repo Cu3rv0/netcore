@@ -52,3 +52,16 @@ TEST_F(GridTests, Conversion_throws_when_turning_malformed_string_into_grid)
 
    ASSERT_THROW(TextToGrid(malformedString),runtime_error);
 }
+
+TEST_F(GridTests, Closed_node_character_conversion)
+{
+   string stringGridWithClosedNodes ="  --\n"
+                                     "--- \n"
+                                     "  --\n"
+                                     " -- \n"; 
+
+   Grid gridWithClosedNodes = TextToGrid(stringGridWithClosedNodes);
+   
+   ASSERT_EQ(NodeType::Closed,gridWithClosedNodes.at(0,0));
+
+}

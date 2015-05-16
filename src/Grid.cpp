@@ -20,6 +20,11 @@ void Grid::ConstructNodes()
          node = make_unique<Node>();
 }
 
+Node& Grid::at(unsigned int x, unsigned int y) 
+{
+   return *m_nodes.at(x).at(y);
+}
+
 const Node& Grid::at(unsigned int x, unsigned int y) const
 {
    return *m_nodes.at(x).at(y);

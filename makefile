@@ -21,5 +21,5 @@ clean:
 	rm -r bin/*.o tests/*.o netcore test
 
 test: $(TEST) $(OBJ)
-	g++ $(TEST) $(OBJ) $(INC) $(CFLAGS) $(LDFLAGS) -o test
+	g++ $(TEST) $(OBJ) $(INC) $(LDFLAGS) $(CFLAGS) -o test
  

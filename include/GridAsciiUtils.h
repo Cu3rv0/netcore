@@ -9,4 +9,5 @@ namespace GridAsciiUtils
    Grid TextToGrid(const std::string&);
 
    char NodeTypeToChar(NodeType type);
+   NodeType CharToNodeType(char);
 }
