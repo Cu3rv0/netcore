@@ -6,8 +6,8 @@ using namespace std;
 string GridAsciiUtils::GridToText(const Grid& grid)
 {
    string gridString("");
-   for (unsigned int x = 0; x != grid.GetWidth(); x++) {
-      for (unsigned int y = 0; y != grid.GetHeigth(); y++) {
+   for (unsigned int y = 0; y != grid.GetHeigth(); y++) {
+      for (unsigned int x = 0; x != grid.GetWidth(); x++) {
          gridString += NodeTypeToChar(grid.at(x,y).GetType());
       }
       gridString += '\n';
@@ -22,8 +22,16 @@ char GridAsciiUtils::NodeTypeToChar(NodeType type)
    {
    case NodeType::Open:
       return '-';
+   case NodeType::Closed:
+      return ' ';
+   case NodeType::Port:
+      return 'P';
+   case NodeType::Cache:
+      return 'C';
+   case NodeType::Socket:
+      return 'X';
    default:
-      return 'x';
+      return '?';
    }
 }
 
@@ -35,6 +43,12 @@ NodeType GridAsciiUtils::CharToNodeType(char typeInChar)
          return NodeType::Open;
       case ' ':
          return NodeType::Closed;
+      case 'P':
+         return NodeType::Port;
+      case 'C':
+         return NodeType::Cache;
+      case 'X':
+         return NodeType::Socket;
       default:
          throw(std::runtime_error("Malformed String"));
    }
